@@ -6,19 +6,9 @@
     <title>Unity WebGL Player | VirtualMart</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
-    <style>
-      *{
-        margin: 0;
-        padding: 0;
-      }
-      canvas{
-        width: 100%;
-        height: 100%;
-      }
-    </style>
   </head>
   <body>
-    <div id="unity-container" class="unity-desktop" style="width: 100%;height: 100%;display: block;">
+    <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas" width=960 height=600></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
@@ -26,12 +16,12 @@
           <div id="unity-progress-bar-full"></div>
         </div>
       </div>
-      <!-- <div id="unity-warning"> </div>
+      <div id="unity-warning"> </div>
       <div id="unity-footer">
         <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
         <div id="unity-build-title">VirtualMart</div>
-      </div> -->
+      </div>
     </div>
     <script>
       var container = document.querySelector("#unity-container");
@@ -105,8 +95,8 @@
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
-        canvas.style.width = "100%";
-        canvas.style.height = "100%";
+        canvas.style.width = "960px";
+        canvas.style.height = "600px";
       }
 
       loadingBar.style.display = "block";
